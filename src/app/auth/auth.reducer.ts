@@ -1,11 +1,9 @@
-import { Action } from '@ngrx/store';
 import {User} from '../model/user.model';
 import {AuthActions, AuthActionTypes} from './auth.actions';
 
-
 export interface AuthState {
-  loggedIn: boolean,
-  user: User
+  loggedIn: boolean;
+  user: User;
 }
 
 export const initialAuthState: AuthState = {
@@ -13,8 +11,7 @@ export const initialAuthState: AuthState = {
   user: undefined
 };
 
-export function authReducer(state = initialAuthState,
-                            action: AuthActions): AuthState {
+export function authReducer(state = initialAuthState, action: AuthActions): AuthState {
   switch (action.type) {
 
     case AuthActionTypes.LoginAction:
@@ -24,10 +21,12 @@ export function authReducer(state = initialAuthState,
       };
 
     case AuthActionTypes.LogoutAction:
-        return {
-          loggedIn: false,
-          user: undefined
-        };
+      // state.loggedIn = false;  Store Freeze example
+      // return state;
+      return {
+        loggedIn: false,
+        user: undefined
+      };
 
     default:
       return state;

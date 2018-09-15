@@ -1,6 +1,5 @@
-
-import { StoreModule, ActionReducerMap } from '@ngrx/store';
-import { Params, RouterStateSnapshot } from '@angular/router';
+import {StoreModule, ActionReducerMap} from '@ngrx/store';
+import {Params, RouterStateSnapshot} from '@angular/router';
 import {
   StoreRouterConnectingModule,
   routerReducer,
@@ -26,11 +25,11 @@ export class CustomSerializer implements RouterStateSerializer<RouterStateUrl> {
       route = route.firstChild;
     }
 
-    const { url, root: { queryParams } } = routerState;
-    const { params } = route;
+    const {url, root: {queryParams}} = routerState;
+    const {params} = route;
 
     // Only return an object including the URL, params and query params
     // instead of the entire snapshot
-    return { url, params, queryParams };
+    return {url, params, queryParams};
   }
 }
