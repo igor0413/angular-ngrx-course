@@ -6,8 +6,7 @@ export interface CoursesState extends EntityState<Course> {
   allCoursesLoaded: boolean;
 }
 
-export const adapter: EntityAdapter<Course> =
-  createEntityAdapter<Course>();
+export const adapter: EntityAdapter<Course> = createEntityAdapter<Course>();
 
 export const initialCoursesState: CoursesState = adapter.getInitialState({
   allCoursesLoaded: false

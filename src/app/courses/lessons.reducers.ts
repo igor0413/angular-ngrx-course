@@ -16,8 +16,7 @@ function sortByCourseAndSeqNo(l1: Lesson, l2: Lesson) {
   }
 }
 
-export const adapter: EntityAdapter<Lesson> =
-  createEntityAdapter<Lesson>({
+export const adapter: EntityAdapter<Lesson> = createEntityAdapter<Lesson>({
     sortComparer: sortByCourseAndSeqNo
   });
 

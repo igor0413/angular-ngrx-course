@@ -9,7 +9,7 @@ import {
   LessonsPageRequested
 } from './course.actions';
 import {throwError, of} from 'rxjs';
-import {catchError, concatMap, exhaustMap, filter, map, mergeMap, withLatestFrom} from 'rxjs/operators';
+import {catchError, concatMap, exhaustMap, filter, map, mergeMap, switchMap, withLatestFrom} from 'rxjs/operators';
 import {CoursesService} from './services/courses.service';
 import {AppState} from '../reducers';
 import {select, Store} from '@ngrx/store';
