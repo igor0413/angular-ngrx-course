@@ -21,8 +21,11 @@ export function authReducer(state = initialAuthState, action: AuthActions): Auth
       };
 
     case AuthActionTypes.LogoutAction:
-      // state.loggedIn = false;  Store Freeze example
-      // return state;
+      // Store Freeze example
+
+/*      state.loggedIn = false;
+      return state;*/
+
       return {
         loggedIn: false,
         user: undefined
@@ -32,3 +35,4 @@ export function authReducer(state = initialAuthState, action: AuthActions): Auth
       return state;
   }
 }
+

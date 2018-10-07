@@ -6,13 +6,13 @@ export function searchLessons(req: Request, res: Response) {
 
   console.log('Searching for lessons ...');
 
-  const error = (Math.random() >= 0.5);
+  // const error = (Math.random() >= 0.5);
 
-  if (error) {
-    console.log('ERROR loading lessons!');
-    res.status(500).json({message: 'random error occurred.'});
-  }
-  else {
+  // if (error) {
+  //   console.log('ERROR loading lessons!');
+  //   res.status(500).json({message: 'random error occurred.'});
+  // }
+  // else {
 
 
     const queryParams = req.query;
@@ -41,5 +41,5 @@ export function searchLessons(req: Request, res: Response) {
       res.status(200).json({payload: lessonsPage});
     }, 1000);
 
-  }
+  // }
 }
